@@ -60,7 +60,7 @@ if __name__ == '__main__':
     tur.up()
     tur.down()
 
-    draw_koch_curve(tur, 4, 60, 5)
+    # draw_koch_curve(tur, 4, 60, 5)
     # draw_hilbert_curve(tur, 4, 90, 5)
     # draw_quadratic_koch_islad(tur, 3, 90, 5)
     # draw_dragon_curve(tur, 3, 90, 5)
