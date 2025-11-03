@@ -20,7 +20,9 @@ class Employee:
         variable that holds the comments received by this employee to zero.
         """
         # TODO: Implement this method then remove this line
-        pass
+        self.gender = gender
+        self.will_comment = will_comment
+        self.comments_received = 0
 
     def __str__(self):
         """
@@ -30,6 +32,22 @@ class Employee:
                 + ": "
                 + str(self.comments_received)
                 + " sexist comments received")
+
+    def set_commenter_status(self, will_comment):
+        self.will_comment = will_comment
+
+    def receive_sexist_comment(self):
+        self.comments_received += 1
+
+    def get_gender(self):
+        return self.gender
+
+    def get_commenter_status(self):
+        return self.will_comment
+
+    def get_comments_received(self):
+        return self.comments_received
+
 
 
 def print_employee_list(lst):
