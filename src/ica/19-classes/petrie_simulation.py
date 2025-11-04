@@ -56,7 +56,8 @@ def print_employee_list(lst):
     by using the print() method
     """
     # TODO: Implement this function then remove this line
-    pass
+    for employee in lst:
+        print(employee)
 
 
 def create_employees(total_num):
@@ -65,8 +66,17 @@ def create_employees(total_num):
     that many employees. It ensures that ~80% are men and the rest women.
     """
     # TODO: Implement this function then remove this line
-    pass
+    num_men = math.floor(total_num * .8)
+    num_wom = total_num - num_men
+    men_emp = []
+    for i in range(num_men):
+        men_emp.append(Employee("Man", False))
 
+    wom_emp = []
+    for i in range(num_wom):
+        wom_emp.append(Employee("Women", False))
+
+    return men_emp + wom_emp
 
 def create_commenters(lst):
     """
@@ -116,26 +126,26 @@ def main():
 
 if __name__ == "__main__":
     "<----- Test code for print_employee_list ----->"
-    lst = [Employee('Man', True),
-           Employee('Man', False),
-           Employee('Woman', True),
-           Employee('Woman', False)]
-    print_employee_list(lst)
+    # lst = [Employee('Man', True),
+    #        Employee('Man', False),
+    #        Employee('Woman', True),
+    #        Employee('Woman', False)]
+    # print_employee_list(lst)
 
     "<----- Test code for create_employees ----->"
     employees = create_employees(10)
     print_employee_list(employees)
 
-    "<----- Test code for create_commenters ----->"
-    create_commenters(employees)
-    print_employee_list(employees)
-
-    "<----- Test code for generate_comments ----->"
-    generate_comments(employees)
-    print_employee_list(employees)
-
-    "<----- Test code for average_comments ----->"
-    print(average_comments(employees))
-
-    "<----- Run the simulation ----->"
+    # "<----- Test code for create_commenters ----->"
+    # create_commenters(employees)
+    # print_employee_list(employees)
+    #
+    # "<----- Test code for generate_comments ----->"
+    # generate_comments(employees)
+    # print_employee_list(employees)
+    #
+    # "<----- Test code for average_comments ----->"
+    # print(average_comments(employees))
+    #
+    # "<----- Run the simulation ----->"
     # main()  # <-- KEEP THIS, Uncomment it after implementing all the functions
